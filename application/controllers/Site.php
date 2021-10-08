@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('Site_model');
+	}
 	public function index()
 	{
 		$this->load->view('include/header');
@@ -28,24 +32,24 @@ class Site extends CI_Controller {
 	}
 
 	public function pass_var(){
-		/*$info_array = array(
+		$message = $this->Site_model->run_query();
+		$info_array = array(
 			"organisation" => "Epsitech",
 			"author" => "Kwezi",
 			"position" => "Software Developer Intern",
-			"email" => "kwezi@digilims.epsi"
-		);*/
+			"email" => "kwezi@digilims.epsi",
+			"message" => $message
+		);
 
-		$info_array["organisation"] = "Epsitech";
+		/*$info_array["organisation"] = "Epsitech";
 		$info_array["author"] = "Kwezi";
 		$info_array["position"] = "Software Developer Internh";
-		$info_array["email"] = "kwezi@digilims.epsi";
+		$info_array["email"] = "kwezi@digilims.epsi";*/
+
+		 
+
 		$this->load->view('include/header');
-		$this->load->view('site/site_variable',array(
-			"organisation" => "Epsitech",
-			"author" => "Kwezi",
-			"position" => "Software Developer Intern",
-			"email" => "kwezi@digilims.epsi"
-		));
+		$this->load->view('site/site_variable',$info_array);
 		$this->load->view('include/footer');
 	}
 }
