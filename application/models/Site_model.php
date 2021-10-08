@@ -7,6 +7,7 @@ class Site_model extends CI_Model {
     }
 
     function save_data($data){
-        $this->db->insert("tbl_users",$data);
+        $this->db->insert("tbl_users",$data); //active code
+        $this->db->query("Insert into tbl_users (name,email,phone_no)"); //raw query
     }
 }

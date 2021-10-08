@@ -51,9 +51,9 @@ class Site extends CI_Controller {
 
 	public function register(){
 		$data = array(
-			"name" => "kwezi",
-			"email" => "kwezi@digilims.com",
-			"phone_no" => "067 118 3913"
+			"name" => "kingsley",
+			"email" => "kingsley@digilims.com",
+			"phone_no" => "067 118 555"
 		);
 		$this->Site_model->save_data($data);
 	}
