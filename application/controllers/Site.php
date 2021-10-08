@@ -12,6 +12,14 @@ class Site extends CI_Controller {
     }
 
 	public function contact_info(){
-		echo "<h1>Welcome To CI Tutorial Contact Us Page</h1><br> <p>Written by kwezi</p>";
+		echo "<h1>Welcome To CI Tutorial Contact Us Page</h1> <p>Written by:".$name."with id".$id."</p>";
+	}
+
+	public function service($id, $name){
+		echo "<h1>Welcome To CI Tutorial Services Page</h1> <p>Written by : ".$name." with id : ".$id."</p>";
+	}
+
+	public function product($name){
+		echo "<h1>Welcome To CI Tutorial Product Page</h1> <p>Available product : ".$name."</p>";
 	}
 }

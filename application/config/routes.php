@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['site/about-info'] = 'site/about';
 $route['site/contact-us'] = 'site/contact_info';
+$route['site/products/(:any)'] = 'site/product/$1';
+$route['site/services/(:num)/(:any)'] = 'site/service/$1/$2';
