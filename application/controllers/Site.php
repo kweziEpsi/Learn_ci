@@ -28,12 +28,18 @@ class Site extends CI_Controller {
 	}
 
 	public function pass_var(){
-		$info_array = array(
+		/*$info_array = array(
 			"organisation" => "Epsitech",
 			"author" => "Kwezi",
 			"position" => "Software Developer Intern",
 			"email" => "kwezi@digilims.epsi"
-		);
+		);*/
+
+		$info_array["organisation"] = "Epsitech";
+		$info_array["author"] = "Kwezi";
+		$info_array["position"] = "Software Developer Internh";
+		$info_array["email"] = "kwezi@digilims.epsi";
+
 		$this->load->view('site/site_variable',$info_array);
 	}
 }
