@@ -4,11 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Site extends CI_Controller {
 	public function index()
 	{
+		$this->load->view('include/header');
 		$this->load->view('site/site_index');
+		$this->load->view('include/footer');
 	}
 
     public function about(){
+		$this->load->view('include/header');
         $this->load->view('site/site_about');
+		$this->load->view('include/footer');
     }
 
 	public function contact_info(){
