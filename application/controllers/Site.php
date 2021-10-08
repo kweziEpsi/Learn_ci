@@ -26,4 +26,14 @@ class Site extends CI_Controller {
 	public function product($name){
 		echo "<h1>Welcome To CI Tutorial Product Page</h1> <p>Available product : ".$name."</p>";
 	}
+
+	public function pass_var(){
+		$info_array = array(
+			"organisation" => "Epsitech",
+			"author" => "Kwezi",
+			"position" => "Software Developer Intern",
+			"email" => "kwezi@digilims.epsi"
+		);
+		$this->load->view('site/site_variable',$info_array);
+	}
 }
