@@ -10,4 +10,8 @@ class Site extends CI_Controller {
     public function about(){
         $this->load->view('site/site_about');
     }
+
+	public function contact_info(){
+		echo "<h1>Welcome To CI Tutorial Contact Us Page</h1><br> <p>Written by kwezi</p>";
+	}
 }
