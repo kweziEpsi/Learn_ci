@@ -57,3 +57,4 @@ $route['site/contact-us'] = 'site/contact_info';
 $route['site/products/(:any)'] = 'site/product/$1';
 $route['site/services/(:num)/(:any)'] = 'site/service/$1/$2';
 $route['site/variables'] = 'site/pass_var';
+$route['site/register'] = 'site/register';

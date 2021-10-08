@@ -5,4 +5,8 @@ class Site_model extends CI_Model {
     function run_query(){
         return "Thank you for your visit!!";
     }
+
+    function save_data($data){
+        $this->db->insert("tbl_users",$data);
+    }
 }

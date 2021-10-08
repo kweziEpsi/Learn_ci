@@ -48,4 +48,13 @@ class Site extends CI_Controller {
 		$this->load->view('site/site_variable',$info_array);
 		$this->load->view('include/footer');
 	}
+
+	public function register(){
+		$data = array(
+			"name" => "kwezi",
+			"email" => "kwezi@digilims.com",
+			"phone_no" => "067 118 3913"
+		);
+		$this->Site_model->save_data($data);
+	}
 }
