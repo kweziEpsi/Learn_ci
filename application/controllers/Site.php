@@ -39,7 +39,13 @@ class Site extends CI_Controller {
 		$info_array["author"] = "Kwezi";
 		$info_array["position"] = "Software Developer Internh";
 		$info_array["email"] = "kwezi@digilims.epsi";
-
-		$this->load->view('site/site_variable',$info_array);
+		$this->load->view('include/header');
+		$this->load->view('site/site_variable',array(
+			"organisation" => "Epsitech",
+			"author" => "Kwezi",
+			"position" => "Software Developer Intern",
+			"email" => "kwezi@digilims.epsi"
+		));
+		$this->load->view('include/footer');
 	}
 }
