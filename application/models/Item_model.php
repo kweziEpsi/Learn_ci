@@ -11,4 +11,13 @@ class Item_model extends CI_Model {
         $query = $this->db->get("tbl_items");
         return $query->result();
     }
+
+    public function save_item()
+    {    
+        $data = array(
+            'title' => $this->input->post('title'),
+            'description' => $this->input->post('description')
+        );
+        return $this->db->insert('tbl_items', $data);
+    }
 }

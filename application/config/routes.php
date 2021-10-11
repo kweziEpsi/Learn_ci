@@ -60,5 +60,6 @@ $route['site/variables'] = 'site/pass_var';
 $route['site/register'] = 'site/register';
 
 $route['Item'] = 'item';
-$route['item/list'] = "item/index";
-$route['item/create']['post'] = "item/store";
+$route['item/list'] = 'item/index';
+$route['item/create'] = 'item/create';
+$route['item/save']['post'] = 'item/store';
