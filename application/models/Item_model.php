@@ -20,4 +20,8 @@ class Item_model extends CI_Model {
         );
         return $this->db->insert('tbl_items', $data);
     }
+
+    public function find_item($id){
+      return $this->db->get_where('tbl_items', array('id' => $id))->row();
+    }
 }

@@ -63,3 +63,4 @@ $route['Item'] = 'item';
 $route['item/list'] = 'item/index';
 $route['item/create'] = 'item/create';
 $route['item/save']['post'] = 'item/store';
+$route['item/read-more/(:num)'] = 'item/show/$1';

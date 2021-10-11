@@ -40,4 +40,12 @@ class Item extends CI_Controller {
         redirect(base_url('item/list'));
         }
    }
+
+   public function show($id){
+    $item = $this->Item_model->find_item($id);
+
+    $this->load->view('include/header');
+    $this->load->view('item/show',array('item'=>$item));
+    $this->load->view('include/footer');
+   }
 }
