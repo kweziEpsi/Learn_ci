@@ -48,4 +48,28 @@ class Item extends CI_Controller {
     $this->load->view('item/show',array('item'=>$item));
     $this->load->view('include/footer');
    }
+
+   public function edit($id)
+   {
+       $item = $this->Item_model->find_item($id);
+
+       $this->load->view('include/header');
+       $this->load->view('item/edit',array('item'=>$item));
+       $this->load->view('include/footer');
+   }
+
+   public function update($id)
+   {
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('description', 'Description', 'required');
+
+
+        if ($this->form_validation->run() == FALSE){
+            $this->session->set_flashdata('errors', validation_errors());
+            redirect(base_url('item/edit/'.$id));
+        }else{ 
+          $this->Item_model->update_item($id);
+          redirect(base_url('item'));
+        }
+   }
 }

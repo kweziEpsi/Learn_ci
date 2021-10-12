@@ -24,4 +24,19 @@ class Item_model extends CI_Model {
     public function find_item($id){
       return $this->db->get_where('tbl_items', array('id' => $id))->row();
     }
+
+    public function update_item($id) 
+    {
+        $data=array(
+            'title' => $this->input->post('title'),
+            'description'=> $this->input->post('description')
+        );
+        if($id==0){
+            return $this->db->insert('tbl_items',$data);
+        }else{
+            $this->db->where('id',$id);
+            return $this->db->update('tbl_items',$data);
+        }  
+    }      
+    
 }
