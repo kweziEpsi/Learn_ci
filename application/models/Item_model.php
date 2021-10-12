@@ -37,6 +37,11 @@ class Item_model extends CI_Model {
             $this->db->where('id',$id);
             return $this->db->update('tbl_items',$data);
         }  
-    }      
+    }
+    
+    public function delete_item($id)
+    {
+        return $this->db->delete('tbl_items', array('id' => $id));
+    }
     
 }

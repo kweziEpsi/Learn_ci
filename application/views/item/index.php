@@ -28,7 +28,7 @@
           <td><?php echo $item->title; ?></td>
           <td><?php echo $item->description; ?></td>          
       <td>
-        <form method="DELETE" action="">
+        <form method="DELETE" action="<?php echo base_url('item/delete/'.$item->id);?>">
           <a class="btn btn-info" href="<?php echo base_url('item/read-more/'.$item->id) ?>"><i class='fa fa-eye' style='font-size:24px'></i></a>
          <a class="btn btn-primary" href="<?php echo base_url('item/edit/'.$item->id) ?>"><i class='fas fa-edit' style='font-size:24px'></i></a>
           <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>

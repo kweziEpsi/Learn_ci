@@ -72,4 +72,10 @@ class Item extends CI_Controller {
           redirect(base_url('item'));
         }
    }
+
+   public function delete($id)
+   {
+       $item = $this->Item_model->delete_item($id);
+       redirect(base_url('item'));
+   }
 }
