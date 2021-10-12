@@ -58,3 +58,4 @@ $route['site/products/(:any)'] = 'site/product/$1';
 $route['site/services/(:num)/(:any)'] = 'site/service/$1/$2';
 $route['site/variables'] = 'site/pass_var';
 $route['site/register'] = 'site/register';
+$route['site/add-book'] = 'site/add_book';

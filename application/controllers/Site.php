@@ -51,10 +51,19 @@ class Site extends CI_Controller {
 
 	public function register(){
 		$data = array(
-			"name" => "kwezi",
-			"email" => "kwezi@digilims.com",
+			"name" => "kwezi reen",
+			"email" => "reen@digilims.com",
 			"phone_no" => "067 118 555"
 		);
 		$this->Site_model->save_data($data);
+	}
+
+	public function add_book(){
+		$data = array(
+			"name" => "Morbi non arcu risus quis",
+			"description" => "Morbi non arcu risus quis varius quam. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. In est ante in nibh mauris cursus. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Etiam dignissim diam quis enim lobortis scelerisque. Faucibus purus in massa tempor. Consequat id porta nibh venenatis cras sed felis eget velit. Ut aliquam purus sit amet luctus. Ut eu sem integer vitae justo eget magna. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Placerat vestibulum lectus mauris ultrices. Adipiscing commodo elit at imperdiet.",
+			"author" => "Zela Reen"
+		);
+		$this->Site_model->save_book($data);
 	}
 }
