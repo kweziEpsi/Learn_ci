@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
+	public function __construct() {
+        parent::__construct(); 
+        
+        $this->load->helper('url');
+     }
+
 	public function index()
 	{
 		$this->load->view('include/header');
@@ -16,7 +22,9 @@ class Site extends CI_Controller {
     }
 
 	public function contact_info(){
-		echo "<h1>Welcome To CI Tutorial Contact Us Page</h1> <p>Written by:".$name."with id".$id."</p>";
+		$this->load->view('include/header');
+        $this->load->view('site/site_contact');
+		$this->load->view('include/footer');
 	}
 
 	public function service($id, $name){
