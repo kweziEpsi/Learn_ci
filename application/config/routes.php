@@ -66,3 +66,4 @@ $route['item/save']['post'] = 'item/store';
 $route['item/read-more/(:num)'] = 'item/show/$1';
 $route['item/edit/(:any)'] = "item/edit/$1";
 $route['item/update/(:any)']['put'] = "item/update/$1";
+$route['item/delete/(:any)']['delete'] = "item/delete/$1";
