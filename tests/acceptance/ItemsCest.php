@@ -34,7 +34,7 @@ class ItemsCest
     
     public function deleteTest(AcceptanceTester $I){
         $I->amGoingTo('delete item');
-        $I->amOnPage('/item/delete/85');
+        $I->amOnPage('/item/delete/91');
         $I->click(['name'=>'delete']);
         $I->amOnPage('/item/list');
     }
