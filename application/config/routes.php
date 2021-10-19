@@ -68,6 +68,7 @@ $route['item/edit/(:any)'] = "item/edit/$1";
 $route['item/update/(:any)']['put'] = "item/update/$1";
 
 $route['User'] = 'user';
+$route['user/signin'] = 'user/signin';
 $route['user/signup'] = 'user/signup';
 $route['user/register'] ['post'] = 'user/register';
-$route['user/signin'] = 'user/signin';
+$route['user/validation'] ['post'] = 'user/validation';

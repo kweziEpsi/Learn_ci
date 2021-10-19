@@ -4,16 +4,17 @@
           <div class="col-md-4 col-md-offset-4">
               <div class="login-panel panel panel-success">
                   <div class="panel-heading">
-                      <h3 class="panel-title">Registration Here</h3>
+                      <h3 class="panel-title">Sign Up</h3>
                   </div>
                   <div class="panel-body">
 
-                  <?php
-                  $error_msg=$this->session->flashdata('error_msg');
-                  if($error_msg){
-                    echo $error_msg;
-                  }
-                   ?>
+                <?php
+                    if ($this->session->flashdata('errors')){
+                        echo '<div class="alert alert-danger">';
+                        echo $this->session->flashdata('errors');
+                        echo "</div>";
+                    }
+                ?>
 
                       <form role="form" method="post" action="<?php echo base_url('user/register'); ?>">
                           <fieldset>
@@ -25,14 +26,15 @@
                                   <input class="form-control" placeholder="Please enter E-mail" name="user_email" type="email" autofocus required>
                               </div>
                               <div class="form-group">
-                                  <input class="form-control" placeholder="Enter Password" name="user_password" type="password" value="" required>
+                                  <input class="form-control" placeholder="Enter Password" name="user_password" type="password"  required>
                               </div>
 
                               <div class="form-group">
-                                  <input class="form-control" placeholder="Enter 10 diMobile No" name="user_mobile" type="number" value="" required>
+                                  <input class="form-control" placeholder="Enter 10 diMobile No" name="user_mobile" type="number" required>
                               </div>
                               <center>
-                              <button class="btn btn-lg btn-success" type="submit" value="Register" name="register"><span class="glyphicon glyphicon-log-in"></span></button></center>
+                                <button class="btn btn-lg btn-success" type="submit" value="Register" name="register"><span class="glyphicon glyphicon-log-in"></span></button>
+                              </center>
 
                           </fieldset>
                       </form>

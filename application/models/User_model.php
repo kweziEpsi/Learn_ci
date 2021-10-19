@@ -13,5 +13,14 @@ class User_model extends CI_Model {
 
         return $this->db->insert('tbl_users', $user);        
     }
+
+    public function validate(){
+        $user = array(
+            'user_email'=>$this->input->post('user_email'),
+            'user_password'=>$this->input->post('user_password')
+              );
+
+              return  $this->db->get_where('tbl_users', array('user_email' => $user['user_email']))->row();               
+    }
     
 }
