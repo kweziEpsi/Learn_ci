@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn_CI 3 Basic Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Learn_CI</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="http://localhost:8000/item/list">Products</a></li>
+      <li><a href="http://localhost:8000/site/about-info">About Us</a></li>
+      <li><a href="http://localhost:8000/site/contact-us">Contact Us</a></li>  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container"><div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h2>Welcome To CI Online Tutorial - Items List</h2>
+        </div>
+        <div class="pull-right">
+            <a class="btn btn-success" href="http://localhost:8000/item/create"><i class="fa fa-plus-square" style="font-size:24px"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-bordered table-hover">
+
+
+  <thead>
+      <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th width="220px">Action</th>
+      </tr>
+  </thead>
+
+
+  <tbody>
+         
+      <tr>
+          <td>Sed do eiusmod</td>
+          <td>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/23">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/23"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/23"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/32">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/32"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/32"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/33">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/33"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/33"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/34">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/34"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/34"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/35">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/35"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/35"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/36">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/36"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/36"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/37">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/37"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/37"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+            
+      <tr>
+          <td>Massa tempor nec feugiat nisl pretium</td>
+          <td>Massa tempor nec feugiat nisl pretium. Leo duis ut diam quam nulla porttitor massa. Justo nec ultrices dui sapien eget. Nullam non nisi est sit amet facilisis magna. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Vitae tortor condimentum lacinia quis vel eros donec. Magna fringilla urna porttitor rhoncus dolor purus non enim. Pellentesque habitant morbi tristique senectus et netus et.</td>          
+      <td>
+        <form method="DELETE" action="http://localhost:8000/item/delete/38">
+          <a class="btn btn-info" href="http://localhost:8000/item/read-more/38"><i class='fa fa-eye' style='font-size:24px'></i></a>
+         <a class="btn btn-primary" href="http://localhost:8000/item/edit/38"><i class='fas fa-edit' style='font-size:24px'></i></a>
+          <button type="submit" class="btn btn-danger"><i class="fa fa-trash" style="font-size:24px"></i></button>
+        </form>
+      </td>     
+      </tr>
+        </tbody>
+
+
+</table></div>
+ </body>
+</html>
