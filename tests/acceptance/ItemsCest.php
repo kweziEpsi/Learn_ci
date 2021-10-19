@@ -24,7 +24,7 @@ class ItemsCest
 
     public function editTest(AcceptanceTester $I){
         $I->amGoingTo('edit item');
-        $I->amOnPage('/item/edit/76');
+        $I->amOnPage('/item/edit/77');
         $I->fillfield('title','Sed do eiusmod tempor');
         $I->fillField('description', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
         $I->click('Submit');
@@ -34,8 +34,9 @@ class ItemsCest
     
     public function deleteTest(AcceptanceTester $I){
         $I->amGoingTo('delete item');
-        $I->amOnPage('/item/list');
+        $I->amOnPage('/item/delete/85');
         $I->click(['name'=>'delete']);
+        $I->amOnPage('/item/list');
     }
 
     
