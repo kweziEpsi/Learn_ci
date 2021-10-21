@@ -71,4 +71,4 @@ $route['User'] = 'user';
 $route['user/signin'] = 'user/signin';
 $route['user/signup'] = 'user/signup';
 $route['user/register'] ['post'] = 'user/register';
-$route['user/validation'] ['post'] = 'user/validation';
+$route['user/login'] ['post'] = 'user/login';

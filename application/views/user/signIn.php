@@ -8,26 +8,34 @@
                   </div>
                   <div class="panel-body">
                     <?php
-                    if($this->session->flashdata('message'))
-                    {
-                        echo '
+                        $success_msg= $this->session->flashdata('success_msg');
+                        $error_msg= $this->session->flashdata('error_msg');
+                        if($success_msg){
+                        ?>
                         <div class="alert alert-success">
-                            '.$this->session->flashdata("message").'
+                        <?php echo $success_msg; ?>
                         </div>
-                        ';
+                        <?php
+                    }
+                    if($error_msg){
+                    ?>
+                        <div class="alert alert-danger">
+                            <?php echo $error_msg; ?>
+                        </div>
+                    <?php
                     }
                     ?>
-                <form method="post" action="<?php echo base_url('user/validation'); ?>">
+                <form method="post" action="<?php echo base_url('user/login'); ?>">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Please enter E-mail" name="user_email" type="email" value="<?php echo set_value('user_email'); ?>" autofocus required>
+                        <input class="form-control" placeholder="Please enter E-mail" name="user_email" type="email" autofocus required>
                         <span class="text-danger"><?php echo form_error('user_email'); ?></span>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" placeholder="Enter Password" name="user_password" type="password" value="<?php echo set_value('user_password'); ?>" required>
+                        <input class="form-control" placeholder="Enter Password" name="user_password" type="password" required>
                         <span class="text-danger"><?php echo form_error('user_password'); ?></span>
                     </div>
                     <div class="form-group">
-                        <center><button class="btn btn-lg btn-success" type="submit" value="Register" name="register"><span class="glyphicon glyphicon-log-in"></span></button>
+                        <center><button class="btn btn-lg btn-success" type="submit" value="login" name="login"><span class="glyphicon glyphicon-log-in"></span></button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url('user/signup'); ?>">Register</a></center>
                     </div>
                 </form>

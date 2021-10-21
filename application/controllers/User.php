@@ -39,30 +39,37 @@ class User extends CI_Controller {
         }      
      }
      
-     public function validation(){
-      $this->form_validation->set_rules('user_email', 'User_email', 'required','is_unique[user.email]');
-      $this->form_validation->set_rules('user_password', 'User_password', 'required');
+     public function login(){
+            $user=array(
+               'user_email'=>$this->input->post('user_email'),
+               'user_password'=>md5($this->input->post('user_password'))
+            );
 
-      if ($this->form_validation->run() == FALSE){ //check if validation rules are false
-          $this->session->set_flashdata('errors', validation_errors());
-          redirect(base_url('user/signin'));
-      }else{
-            $auth_user = $this->User_model->validate();
-            if (count($auth_user) > 0)
+            $data=$this->User_model->login($user['user_email'],$user['user_password']);
+
+            if($data)
             {
-                // set session
-                $sess_data = array('signin' => TRUE, 'user_name' => $auth_user[0]->user_name, 'uid' => $auth_user[0]->user_id);
-                $this->session->set_userdata($sess_data);
-                redirect(base_url('user/profile'));
+              $this->session->set_userdata('user_id',$data['user_id']);
+              $this->session->set_userdata('user_email',$data['user_email']);
+              $this->session->set_userdata('user_name',$data['user_name']);
+              $this->session->set_userdata('user_mobile',$data['user_mobile']);
+              redirect(base_url('user/profile'));
+            }
+            else{
+              $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+              redirect(base_url('user/signin'));
             }
       } 
-     }
+     
 
-     public function logout()
-      {
-         $data = array('signin' => '', 'user_name' => '', 'uid' => '');
-         $this->session->unset_userdata($data);
+     public function profile(){
+         $this->load->view('include/header');       
+         $this->load->view('user/profile',);
+         $this->load->view('include/footer');
+      }
+
+     public function logout(){
          $this->session->sess_destroy();
-         redirect(base_url('/'));
+         redirect(base_url('user/signin'), 'refresh');
       }
 }
