@@ -1,3 +1,8 @@
+<?php 
+    if (!isset($_SESSION['user_name'])) {
+        redirect(base_url('user/login'));
+}
+?>
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">

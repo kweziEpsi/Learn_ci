@@ -66,4 +66,13 @@ $route['item/save']['post'] = 'item/store';
 $route['item/read-more/(:num)'] = 'item/show/$1';
 $route['item/edit/(:any)'] = "item/edit/$1";
 $route['item/update/(:any)']['put'] = "item/update/$1";
+<<<<<<< HEAD
 $route['item/delete/(:any)']['delete'] = "item/delete/$1";
+=======
+
+$route['User'] = 'user';
+$route['user/signin'] = 'user/signin';
+$route['user/signup'] = 'user/signup';
+$route['user/register'] ['post'] = 'user/register';
+$route['user/login'] ['post'] = 'user/login';
+>>>>>>> a2968aae14892af57e65c551db7bb5069699db3c

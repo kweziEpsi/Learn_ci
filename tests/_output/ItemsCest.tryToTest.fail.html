@@ -18,21 +18,18 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="<?php echo base_url('item/list') ?>">Products</a></li>
-      <li><a href="<?php echo base_url('site/about-info') ?>">About Us</a></li>
-      <li><a href="<?php echo base_url('site/contact-us') ?>">Contact Us</a></li>  
+      <li><a href="http://localhost:8000/item/list">Products</a></li>
+      <li><a href="http://localhost:8000/site/about-info">About Us</a></li>
+      <li><a href="http://localhost:8000/site/contact-us">Contact Us</a></li>  
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <?php 
-      if (!isset($_SESSION['user_name'])) { ?>
-        <li><a href="<?php echo base_url('user/signup'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="<?php echo base_url('user/signin'); ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <?php } else{ ?>
-        <li><a href="<?php echo base_url('user/profile'); ?>"><span class="glyphicon glyphicon-user"></span> <?php echo $this->session->userdata('user_name'); ?></a></li>
-        <li><a href="<?php echo base_url('user/logout'); ?>"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    <?php } ?>
-      </ul>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </div>
 </nav>
   
-<div class="container">
+<div class="container"><h3>Welcome To CI Online Tutorial</h3>
+<p>Written by kwezi</p></div>
+ </body>
+</html>

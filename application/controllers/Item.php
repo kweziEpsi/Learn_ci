@@ -15,13 +15,11 @@ class Item extends CI_Controller {
     * Start list view function.
     *
    */
-    public function index()
-    {
+    public function index(){
         $data['data'] = $this->Item_model->get_item(); //link to get items function from model
- 
         $this->load->view('include/header');       
         $this->load->view('item/index',$data); //display view with list of items
-        $this->load->view('include/footer');
+        $this->load->view('include/footer'); 
     }
     /**
     * End list view function.
@@ -32,11 +30,10 @@ class Item extends CI_Controller {
     * Start create view function.
     *
    */
-    public function create()
-   {
-      $this->load->view('include/header');
-      $this->load->view('item/create');
-      $this->load->view('include/footer');   
+    public function create(){
+        $this->load->view('include/header');
+        $this->load->view('item/create');
+        $this->load->view('include/footer');  
    }
    /**
     * End create view function.
@@ -70,11 +67,10 @@ class Item extends CI_Controller {
     *
    */
    public function show($id){
-    $item = $this->Item_model->find_item($id); //link to find item function in model
-
-    $this->load->view('include/header');
-    $this->load->view('item/show',array('item'=>$item)); //display single item on view
-    $this->load->view('include/footer');
+        $item = $this->Item_model->find_item($id); //link to find item function in model
+        $this->load->view('include/header');
+        $this->load->view('item/show',array('item'=>$item)); //display single item on view
+        $this->load->view('include/footer');
    }
    /**
     * End display single item function.
@@ -85,13 +81,11 @@ class Item extends CI_Controller {
     * Start edit Function.
     *
    */
-   public function edit($id)
-   {
-       $item = $this->Item_model->find_item($id); //Find item
-
-       $this->load->view('include/header');
-       $this->load->view('item/edit',array('item'=>$item)); //Display item to edit
-       $this->load->view('include/footer');
+   public function edit($id){
+        $item = $this->Item_model->find_item($id); //Find item
+        $this->load->view('include/header');
+        $this->load->view('item/edit',array('item'=>$item)); //Display item to edit
+        $this->load->view('include/footer');
    }
    /**
     * End edit Function.
