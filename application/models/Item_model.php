@@ -6,7 +6,8 @@ class Item_model extends CI_Model {
     * Start get items function.
     *
    */
-    public function get_item(){
+    public function get_items($limit,$start){
+        $this->db->limit($limit, $start);
         if(!empty($this->input->get("search"))){ //check if input fields are not empty
           $this->db->like('title', $this->input->get("search")); //get the title
           $this->db->or_like('description', $this->input->get("search")); //get the description 
@@ -18,7 +19,19 @@ class Item_model extends CI_Model {
     * End get items function.
     *
    */
+  /**
+    * Start count items function.
+    *
+   */
+   public function items_count(){
+       $count = $this->db->count_all('tbl_items');
 
+       return $count;
+   }
+    /**
+    * Start count items function.
+    *
+   */
    /**
     * Start save items function.
     *

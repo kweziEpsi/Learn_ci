@@ -9,6 +9,7 @@ class Item extends CI_Controller {
         $this->load->helper('url');
         $this->load->library('form_validation');
         $this->load->library('session');
+        $this->load->library('pagination');
      }
 
     /**
@@ -16,7 +17,16 @@ class Item extends CI_Controller {
     *
    */
     public function index(){
-        $data['data'] = $this->Item_model->get_item(); //link to get items function from model
+        $config['base_url'] = 'http://localhost:8000/item/list/';
+        $config['total_rows'] = $this->Item_model->items_count();;
+        $config['per_page'] = 5;
+        $config["uri_segment"] = 3;
+
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
+        $data['links'] = $this->pagination->create_links();
+
+        $data['items'] = $this->Item_model->get_items($config["per_page"], $page); //link to get items function from model
         $this->load->view('include/header');       
         $this->load->view('item/index',$data); //display view with list of items
         $this->load->view('include/footer'); 

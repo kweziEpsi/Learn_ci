@@ -20,7 +20,7 @@
       </tr>
   </thead>
   <tbody>
-   <?php foreach ($data as $item) { ?>      
+   <?php foreach ($items as $item) { ?>      
       <tr>
         <td width=auto;><?php echo $item->id; ?></td>
         <td width=auto;><?php echo $item->title; ?></td>
@@ -37,3 +37,5 @@
       <?php } ?>
   </tbody>
 </table>
+
+<p><?php echo $links; ?></p>

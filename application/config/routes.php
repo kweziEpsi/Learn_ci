@@ -61,6 +61,7 @@ $route['site/register'] = 'site/register';
 
 $route['Item'] = 'item';
 $route['item/list'] = 'item/index';
+$route['item/list/(:any)'] = 'item/index/$1';
 $route['item/create'] = 'item/create';
 $route['item/save']['post'] = 'item/store';
 $route['item/read-more/(:num)'] = 'item/show/$1';
