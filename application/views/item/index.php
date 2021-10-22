@@ -36,4 +36,4 @@
       </tr>
       <?php } ?>
   </tbody>
-stat</table>
+</table>
