@@ -27,10 +27,10 @@
         <td><?php echo $item->description; ?></td>          
         <td>
             <center><a class="btn btn-info" href="<?php echo base_url('item/read-more/'.$item->id) ?>"><i class='fa fa-eye' style='font-size:24px'></i></a>
-            <a class="btn btn-primary" href="<?php echo base_url('item/edit/'.$item->id) ?>"><i class='fas fa-edit' style='font-size:24px'></i></a>
+            <a class="btn btn-primary" name="edit" href="<?php echo base_url('item/edit/'.$item->id) ?>"><i class='fas fa-edit' style='font-size:24px'></i></a>
             <?php 
                 if (isset($_SESSION['user_name'])) { ?>
-                    <a class="btn btn-danger" href="<?php echo base_url('item/delete/'.$item->id) ?>"><i class='fas fa-trash' style='font-size:24px'></i></a></center>
+                    <a name="delete" class="btn btn-danger" href="<?php echo base_url('item/delete/'.$item->id) ?>"><i class='fas fa-trash' style='font-size:24px'></i></a></center>
             <?php } ?>    
         </td>     
       </tr>
