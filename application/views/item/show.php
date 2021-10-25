@@ -9,7 +9,7 @@
             <h2>Welcome To CI Online Tutorial - Show Item</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="<?php echo base_url('item/list');?>"> Back</a>
+            <a class="btn btn-primary" name="back" href="<?php echo base_url('item/list');?>"> Back</a>
         </div>
     </div>
 </div>

@@ -17,10 +17,10 @@ class ItemsCest
         $I->amOnPage('/');
         $I->click(['name'=>'signup']);
         $I->amOnPage('http://localhost:8000/user/signup');
-        $I->fillField('user_name', 'Velaphi');
-        $I->fillField('user_email', 'velaphi@digilims.com');
-        $I->fillField('user_password', 'velaphi');
-        $I->fillField('user_mobile', '0671153915');
+        $I->fillField('user_name', 'Cavlyn');
+        $I->fillField('user_email', 'cavlyn@digilims.com');
+        $I->fillField('user_password', 'cavlyn');
+        $I->fillField('user_mobile', '0671173917');
         $I->click(['name'=>'register']);
         $I->amOnPage('http://localhost:8000/user/signin');
         $I->see('Sign In');
@@ -81,4 +81,22 @@ class ItemsCest
         $I->see('Welcome To CI Online Tutorial - Items List');
         $I->click(['name'=>'logout']);
     }
+
+    public function viewItemTest(AcceptanceTester $I){
+        $I->amGoingTo('view item');
+        $I->click(['name'=>'signin']);
+        $I->amOnPage('http://localhost:8000/user/signin'); 
+        $I->fillField('user_email', 'kwezi@digilims.com');
+        $I->fillField('user_password', 'kwezi');
+        $I->click(['name'=>'login']);
+        $I->amOnPage('http://localhost:8000/user/profile');
+        $I->see('Portfolio');
+        $I->click(['name'=>'items']);
+        $I->amOnPage('http://localhost:8000/item/list/');
+        $I->click(['name'=>'read']);
+        $I->see('Welcome To CI Online Tutorial - Show Item');
+        $I->click(['name'=>'back']);
+        $I->amOnPage('http://localhost:8000/item/list/');
+        $I->click(['name'=>'logout']);
+    } 
 }
