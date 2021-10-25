@@ -17,10 +17,10 @@ class ItemsCest
         $I->amOnPage('/');
         $I->click(['name'=>'signup']);
         $I->amOnPage('http://localhost:8000/user/signup');
-        $I->fillField('user_name', 'Reen');
-        $I->fillField('user_email', 'reen@digilims.com');
-        $I->fillField('user_password', 'reen');
-        $I->fillField('user_mobile', '0671113911');
+        $I->fillField('user_name', 'Mxolisi');
+        $I->fillField('user_email', 'mxolisi@digilims.com');
+        $I->fillField('user_password', 'mxolisi');
+        $I->fillField('user_mobile', '0671133913');
         $I->click(['name'=>'register']);
         $I->amOnPage('http://localhost:8000/user/signin');
         $I->see('Sign In');
@@ -47,5 +47,22 @@ class ItemsCest
         $I->click(['name'=>'logout']);
     }
 
-   
+    public function editTest(AcceptanceTester $I){
+        $I->amGoingTo('edit item');
+        $I->click(['name'=>'signin']);
+        $I->amOnPage('http://localhost:8000/user/signin'); 
+        $I->fillField('user_email', 'kwezi@digilims.com');
+        $I->fillField('user_password', 'kwezi');
+        $I->click(['name'=>'login']);
+        $I->amOnPage('http://localhost:8000/user/profile');
+        $I->see('Portfolio');
+        $I->click(['name'=>'items']);
+        $I->amOnPage('http://localhost:8000/item/edit/11');
+        $I->fillfield('title','Sed do eiusmod tempor');
+        $I->fillField('description', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        $I->click('Submit');
+        $I->amOnPage('http://localhost:8000/item/list');
+        $I->see('Welcome To CI Online Tutorial - Items List');
+        $I->click(['name'=>'logout']);
+    }
 }
