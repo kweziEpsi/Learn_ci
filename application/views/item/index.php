@@ -4,7 +4,7 @@
             <h2>Welcome To CI Online Tutorial - Items List</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="<?php echo base_url('item/create') ?>"><i class="fa fa-plus-square" style="font-size:24px"></i></a>
+            <a class="btn btn-success" name="add" href="<?php echo base_url('item/create') ?>"><i class="fa fa-plus-square" style="font-size:24px"></i></a>
         </div>
     </div>
 </div>
