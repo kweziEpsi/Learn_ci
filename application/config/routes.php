@@ -77,16 +77,16 @@ $route['user/login'] ['post'] = 'user/login';
 
 $route['LearnershipType'] = 'learnershiptype';
 $route['learnershiptype/list'] = 'learnershiptype/index';
-$route['learnership/type/create'] = 'learnership/type/create';
-$route['learnership/type/save']['post'] = 'learnership/type/store';
-$route['learnership/type/read-more/(:num)'] = 'learnership/type/show/$1';
+$route['learnershiptype/create'] = 'learnershiptype/create';
+$route['learnershiptype/save']['post'] = 'learnershiptype/store';
+/*$route['learnership/type/read-more/(:num)'] = 'learnership/type/show/$1';
 $route['learnership/type/edit/(:num)'] = 'learnership/type/edit/$1';
 $route['learnership/type/update/(:num)']['put'] = 'learnership/type/update/$1';
 $route['learnership/type/delete/(:num)']['delete'] = 'learnership/type/delete/$1';
 
 $route['LearnershipSubType'] = 'learnership-sub-type';
 $route['learnership-sub-type/list'] = 'learnership-sub-type/index';
-/*$route['learnership-sub-type/create'] = 'learnership-sub-type/create';
+$route['learnership-sub-type/create'] = 'learnership-sub-type/create';
 $route['learnership-sub-type/save']['post'] = 'learnership-sub-type/store';
 $route['learnership-sub-type/read-more/(:num)'] = 'learnership-sub-type/show/$1';
 $route['learnership-sub-type/edit/(:num)'] = 'learnership-sub-type/edit/$1';

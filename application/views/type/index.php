@@ -4,7 +4,7 @@
             <h2>Welcome To CI Online Tutorial - Learnership Type List</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" name="add" href=""><i class="fa fa-plus-square" style="font-size:24px"></i></a>
+            <a class="btn btn-success" name="add" href="<?php echo base_url('learnershiptype/create');?>"><i class="fa fa-plus-square" style="font-size:24px"></i></a>
         </div>
     </div>
 </div>
