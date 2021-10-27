@@ -20,7 +20,7 @@
       </tr>
   </thead>
   <tbody>
-   <?php foreach ($data as $type) { ?>      
+   <?php foreach ($types as $type) { ?>      
       <tr>
         <td width=auto;><?php echo $type->id; ?></td>
         <td width=auto;><?php echo $type->name; ?></td>
@@ -37,3 +37,5 @@
       <?php } ?>
   </tbody>
 </table>
+
+<p><?php echo $links; ?></p>

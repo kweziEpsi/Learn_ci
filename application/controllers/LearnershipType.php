@@ -18,7 +18,16 @@ class LearnershipType extends CI_Controller {
     */
     public function index()
     {
-        $data['data'] = $this->LearnershipType_model->get_types();
+        $config['base_url'] = 'http://localhost:8000/learnershiptype/list/';
+        $config['total_rows'] = $this->LearnershipType_model->types_count();
+        $config['per_page'] = 5;
+        $config["uri_segment"] = 3;
+
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(3))? $this->uri->segment(3) : 0;
+        $data['links'] = $this->pagination->create_links();
+
+        $data['types'] = $this->LearnershipType_model->get_types($config["per_page"], $page);
 
         $this->load->view('include/header');       
         $this->load->view('type/index',$data);
