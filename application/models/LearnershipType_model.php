@@ -27,7 +27,7 @@ class LearnershipType_model extends CI_Model {
      */
 
      /**
-    * Start save items function.
+    * Start save learnership type function.
     *
    */
   public function save_type()
@@ -42,4 +42,16 @@ class LearnershipType_model extends CI_Model {
   * End save learnership type function.
   *
   */
+
+  /**
+  * Start find item function.
+  *
+  */
+  public function find_type($id){
+    return $this->db->get_where('tbl_learnership_type', array('id' => $id))->row(); //return data from learnership type table where 'id' = $id
+  }
+  /**
+  * End find item function.
+  *
+ */
 }

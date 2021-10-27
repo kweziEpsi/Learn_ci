@@ -30,7 +30,7 @@ class LearnershipType extends CI_Controller {
         $data['types'] = $this->LearnershipType_model->get_types($config["per_page"], $page);
 
         $this->load->view('include/header');       
-        $this->load->view('type/index',$data);
+        $this->load->view('learnership/type/index',$data);
         $this->load->view('include/footer');
     }
     /**
@@ -44,7 +44,7 @@ class LearnershipType extends CI_Controller {
    */
     public function create(){
         $this->load->view('include/header');
-        $this->load->view('type/create');
+        $this->load->view('learnership/type/create');
         $this->load->view('include/footer');  
     }
     /**
@@ -70,6 +70,21 @@ class LearnershipType extends CI_Controller {
     }
     /**
     * End save to db function.
+    *
+    */
+
+    /**
+    * Start display single learnership type function.
+    *
+   */
+   public function show($id){
+    $type = $this->LearnershipType_model->find_type($id); //link to find learnership type function in model
+    $this->load->view('include/header');
+    $this->load->view('learnership/type/show',array('type'=>$type)); //display single learnership type on view
+    $this->load->view('include/footer');
+    }
+    /**
+    * End display single learnership type function.
     *
     */
 }
