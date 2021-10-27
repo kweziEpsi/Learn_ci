@@ -90,6 +90,8 @@ class Item_model extends CI_Model {
     public function delete_item($id)
     {
         return $this->db->delete('tbl_items', array('id' => $id)); //find data from items table where 'id' = $id and delete item
+        $this->db->alter('tbl_items');
+        $this->db->truncate('tbl_items');
     }
     /**
     * End delete item function.

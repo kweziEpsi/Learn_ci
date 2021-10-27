@@ -19,6 +19,16 @@
     <ul class="nav navbar-nav">
       <li><a href="/">Home</a></li>
       <li><a name="items" href="<?php echo base_url('item/list') ?>">Products</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learnership
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<?php echo base_url('learnershiptype/list')?>">Type</a></li>
+          <li><a href="<?php echo base_url('learnership-sub-type/list')?>">SubType</a></li>
+          <li><a href="<?php echo base_url('unit-standard/list')?>">Unit Standard</a></li>
+          <li><a href="<?php echo base_url('module/list')?>">Module</a></li>
+        </ul>
+      </li>
       <li><a href="<?php echo base_url('site/about-info') ?>">About Us</a></li>
       <li><a href="<?php echo base_url('site/contact-us') ?>">Contact Us</a></li>  
     </ul>
@@ -30,6 +40,7 @@
       <?php } else{ ?>
         <li><a name="profile" href="<?php echo base_url('user/profile'); ?>"><span class="glyphicon glyphicon-user"></span> <?php echo $this->session->userdata('user_name'); ?></a></li>
         <li><a name="logout" href="<?php echo base_url('user/logout'); ?>"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <!--<li><a name="edit_t" href="<?php echo base_url('item/get_id'); ?>"><i class='fas fa-edit' style='font-size:24px'></i></a></li>-->
     <?php } ?>
       </ul>
   </div>

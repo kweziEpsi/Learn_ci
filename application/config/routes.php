@@ -74,3 +74,46 @@ $route['user/signin'] = 'user/signin';
 $route['user/signup'] = 'user/signup';
 $route['user/register'] ['post'] = 'user/register';
 $route['user/login'] ['post'] = 'user/login';
+
+$route['LearnershipType'] = 'learnershiptype';
+$route['learnershiptype/list'] = 'learnershiptype/index';
+$route['learnership/type/create'] = 'learnership/type/create';
+$route['learnership/type/save']['post'] = 'learnership/type/store';
+$route['learnership/type/read-more/(:num)'] = 'learnership/type/show/$1';
+$route['learnership/type/edit/(:num)'] = 'learnership/type/edit/$1';
+$route['learnership/type/update/(:num)']['put'] = 'learnership/type/update/$1';
+$route['learnership/type/delete/(:num)']['delete'] = 'learnership/type/delete/$1';
+
+$route['LearnershipSubType'] = 'learnership-sub-type';
+$route['learnership-sub-type/list'] = 'learnership-sub-type/index';
+/*$route['learnership-sub-type/create'] = 'learnership-sub-type/create';
+$route['learnership-sub-type/save']['post'] = 'learnership-sub-type/store';
+$route['learnership-sub-type/read-more/(:num)'] = 'learnership-sub-type/show/$1';
+$route['learnership-sub-type/edit/(:num)'] = 'learnership-sub-type/edit/$1';
+$route['learnership-sub-type/update/(:num)']['put'] = 'learnership-sub-type/update/$1';
+$route['learnership-sub-type/delete/(:num)']['delete'] = 'learnership-sub-type/delete/$1';
+
+$route['UnitStandard'] = 'unit-standard';
+$route['unit-standard/list'] = 'unit-standard/index';
+$route['unit-standard/create'] = 'unit-standard/create';
+$route['unit-standard/save']['post'] = 'unit-standard/store';
+$route['unit-standard/read-more/(:num)'] = 'unit-standard/show/$1';
+$route['unit-standard/edit/(:num)'] = 'unit-standard/edit/$1';
+$route['unit-standard/update/(:num)']['put'] = 'unit-standard/update/$1';
+$route['unit-standard/delete/(:num)']['delete'] = 'unit-standard/delete/$1';
+
+$route['Module'] = 'module';
+$route['module/list'] = 'module/index';
+$route['module/create'] = 'module/create';
+$route['module/save']['post'] = 'module/store';
+$route['module/read-more/(:num)'] = 'module/show/$1';
+$route['module/edit/(:num)'] = 'module/edit/$1';
+$route['module/update/(:num)']['put'] = 'module/update/$1';
+$route['module/delete/(:num)']['delete'] = 'module/delete/$1';
+
+
+$route['item/get_id'] = 'item/get_id';
+$route['item/get_rec']['post'] = 'item/get_rec';
+$route['item/edit_t'] = 'item/edit_t';
+$route['item/update_t']['put'] = 'item/update_t';
+*/

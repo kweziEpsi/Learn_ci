@@ -18,7 +18,7 @@ class Item extends CI_Controller {
    */
     public function index(){
         $config['base_url'] = 'http://localhost:8000/item/list/';
-        $config['total_rows'] = $this->Item_model->items_count();;
+        $config['total_rows'] = $this->Item_model->items_count();
         $config['per_page'] = 5;
         $config["uri_segment"] = 3;
 
@@ -97,6 +97,22 @@ class Item extends CI_Controller {
         $this->load->view('item/edit',array('item'=>$item)); //Display item to edit
         $this->load->view('include/footer');
    }
+
+   /**
+    * public function get_id(){
+    * $this->load->view('include/header');
+    * $this->load->view('item/get_rec');
+    * $this->load->view('include/footer');
+    * }
+
+    * public function get_rec(){
+    *   $id = $this->input->post('id');
+    *    $item = $this->Item_model->find_item($id);
+    *   $this->load->view('include/header');
+    *   $this->load->view('item/edit_rec',array('item'=>$item)); //Display item to edit
+    *   $this->load->view('include/footer');
+    * }
+    */
    /**
     * End edit Function.
     *
