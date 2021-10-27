@@ -87,4 +87,41 @@ class LearnershipType extends CI_Controller {
     * End display single learnership type function.
     *
     */
+
+    /**
+    * Start edit Function.
+    *
+   */
+   public function edit($id){
+    $type = $this->LearnershipType_model->find_type($id); //Find item
+    $this->load->view('include/header');
+    $this->load->view('learnership/type/edit',array('type'=>$type)); //Display item to edit
+    $this->load->view('include/footer');
+    }
+    /**
+    * End edit Function.
+    *
+    */
+       /**
+    * Start Update Function.
+    *
+   */
+   public function update($id)
+   {
+        $this->form_validation->set_rules('name', 'Name', 'required'); //validate name
+        $this->form_validation->set_rules('credits', 'Credits', 'required'); //validate credits
+
+
+        if ($this->form_validation->run() == FALSE){ //check if validation rules are false
+            $this->session->set_flashdata('errors', validation_errors()); //error message
+            redirect(base_url('learnershiptype/edit/'.$id)); //redirect to edit view
+        }else{ 
+          $this->LearnershipType_model->update_type($id); //link to update item function from model 
+          redirect(base_url('learnershiptype/list')); //redirect to list
+        }
+   }
+   /**
+    * End Update Function.
+    *
+   */
 }

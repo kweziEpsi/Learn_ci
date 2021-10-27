@@ -26,8 +26,8 @@
         <td width=auto;><?php echo $type->name; ?></td>
         <td><?php echo $type->credits; ?></td>          
         <td>
-            <center><a class="btn btn-info" name="read" href="<?php echo base_url('learnershiptype/read-more/'.$type->id) ?>""><i class='fa fa-eye' style='font-size:24px'></i></a>
-            <a class="btn btn-primary" name="edit" href=""><i class='fas fa-edit' style='font-size:24px'></i></a>
+            <center><a class="btn btn-info" name="read" href="<?php echo base_url('learnershiptype/read-more/'.$type->id) ?>"><i class='fa fa-eye' style='font-size:24px'></i></a>
+            <a class="btn btn-primary" name="edit" href="<?php echo base_url('learnershiptype/edit/'.$type->id) ?>"><i class='fas fa-edit' style='font-size:24px'></i></a>
             <?php 
                 if (isset($_SESSION['user_name'])) { ?>
                     <a name="delete" class="btn btn-danger" href=""><i class='fas fa-trash' style='font-size:24px'></i></a></center>

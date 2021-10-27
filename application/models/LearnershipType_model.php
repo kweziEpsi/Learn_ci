@@ -54,4 +54,26 @@ class LearnershipType_model extends CI_Model {
   * End find item function.
   *
  */
+
+    /**
+    * Start update learnership type function.
+    *
+   */
+  public function update_type($id) 
+  {
+      $data=array(
+          'name' => $this->input->post('name'), //get the title data input
+          'credits'=> $this->input->post('credits') //get the description data input
+      );
+      if($id==0){ //check if $id == 0
+          return $this->db->insert('tbl_learnership_type',$data); //insert data to items table and return data
+      }else{
+          $this->db->where('id',$id); //find data from items table where 'id' = $id
+          return $this->db->update('tbl_learnership_type',$data); //update and return data 
+      }  
+  }
+  /**
+  * End update learnership type function.
+  *
+ */
 }
