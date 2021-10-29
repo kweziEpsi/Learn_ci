@@ -85,16 +85,16 @@ $route['learnershiptype/edit/(:num)'] = 'learnershiptype/edit/$1';
 $route['learnershiptype/update/(:num)']['put'] = 'learnershiptype/update/$1';
 $route['learnershiptype/delete/(:num)']['delete'] = 'learnershiptype/delete/$1';
 
-/*$route['LearnershipSubType'] = 'learnership-sub-type';
-$route['learnership-sub-type/list'] = 'learnership-sub-type/index';
-$route['learnership-sub-type/create'] = 'learnership-sub-type/create';
-$route['learnership-sub-type/save']['post'] = 'learnership-sub-type/store';
-$route['learnership-sub-type/read-more/(:num)'] = 'learnership-sub-type/show/$1';
-$route['learnership-sub-type/edit/(:num)'] = 'learnership-sub-type/edit/$1';
-$route['learnership-sub-type/update/(:num)']['put'] = 'learnership-sub-type/update/$1';
-$route['learnership-sub-type/delete/(:num)']['delete'] = 'learnership-sub-type/delete/$1';
+$route['LearnershipSubType'] = 'learnershipsubtype';
+$route['learnershipsubtype/list'] = 'learnershipsubtype/index';
+$route['learnershipsubtype/create'] = 'learnershipsubtype/create';
+$route['learnershipsubtype/save']['post'] = 'learnershipsubtype/store';
+$route['learnershipsubtype/read-more/(:num)'] = 'learnershipsubtype/show/$1';
+$route['learnershipsubtype/edit/(:num)'] = 'learnershipsubtype/edit/$1';
+$route['learnershipsubtype/update/(:num)']['put'] = 'learnershipsubtype/update/$1';
+$route['learnershipsubtype/delete/(:num)']['delete'] = 'learnershipsubtype/delete/$1';
 
-$route['UnitStandard'] = 'unit-standard';
+/*$route['UnitStandard'] = 'unit-standard';
 $route['unit-standard/list'] = 'unit-standard/index';
 $route['unit-standard/create'] = 'unit-standard/create';
 $route['unit-standard/save']['post'] = 'unit-standard/store';

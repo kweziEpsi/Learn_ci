@@ -14,7 +14,7 @@ class LearnershipType_model extends CI_Model {
     }
 
     /**
-    * Start count items function.
+    * Start count learnership types function.
     *
     */
    public function types_count(){
@@ -22,7 +22,7 @@ class LearnershipType_model extends CI_Model {
       return $count;
     }
     /**
-     * End count types function.
+     * End count learnership types function.
      *
      */
 
@@ -44,14 +44,14 @@ class LearnershipType_model extends CI_Model {
   */
 
   /**
-  * Start find item function.
+  * Start find learnership type function.
   *
   */
   public function find_type($id){
     return $this->db->get_where('tbl_learnership_type', array('id' => $id))->row(); //return data from learnership type table where 'id' = $id
   }
   /**
-  * End find item function.
+  * End find learnership type function.
   *
  */
 
@@ -77,7 +77,7 @@ class LearnershipType_model extends CI_Model {
   *
  */
 /**
-    * Start delete item function.
+    * Start delete learnership type function.
     *
    */
   public function delete_type($id)
@@ -85,7 +85,7 @@ class LearnershipType_model extends CI_Model {
       return $this->db->delete('tbl_learnership_type', array('id' => $id)); //find data from type table where 'id' = $id and delete item
   }
   /**
-  * End delete item function.
+  * End delete learnership type function.
   *
  */
 }
