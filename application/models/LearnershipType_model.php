@@ -76,4 +76,16 @@ class LearnershipType_model extends CI_Model {
   * End update learnership type function.
   *
  */
+/**
+    * Start delete item function.
+    *
+   */
+  public function delete_type($id)
+  {
+      return $this->db->delete('tbl_learnership_type', array('id' => $id)); //find data from type table where 'id' = $id and delete item
+  }
+  /**
+  * End delete item function.
+  *
+ */
 }

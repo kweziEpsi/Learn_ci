@@ -124,4 +124,17 @@ class LearnershipType extends CI_Controller {
     * End Update Function.
     *
    */
+  /**
+    * Start Delete Function.
+    *
+   */
+  public function delete($id)
+  {
+      $type = $this->LearnershipType_model->delete_type($id); //link to delete type function from model
+      redirect(base_url('learnershiptype/list')); //redirect to list
+  }
+  /**
+   * End Delete Data Function.
+   *
+  */
 }

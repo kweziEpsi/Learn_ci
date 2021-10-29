@@ -30,7 +30,7 @@
             <a class="btn btn-primary" name="edit" href="<?php echo base_url('learnershiptype/edit/'.$type->id) ?>"><i class='fas fa-edit' style='font-size:24px'></i></a>
             <?php 
                 if (isset($_SESSION['user_name'])) { ?>
-                    <a name="delete" class="btn btn-danger" href=""><i class='fas fa-trash' style='font-size:24px'></i></a></center>
+                    <a name="delete" class="btn btn-danger" href="<?php echo base_url('learnershiptype/delete/'.$type->id) ?>"><i class='fas fa-trash' style='font-size:24px'></i></a></center>
             <?php } ?>    
         </td>     
       </tr>
