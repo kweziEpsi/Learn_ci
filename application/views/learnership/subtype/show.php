@@ -9,7 +9,7 @@
             <h2>Welcome To CI Online Tutorial - Learnership Type</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" name="back" href="<?php echo base_url('learnershiptype/list');?>"> Back</a>
+            <a class="btn btn-primary" name="back" href="<?php echo base_url('learnershipsubtype/list');?>"> Back</a>
         </div>
     </div>
 </div>
