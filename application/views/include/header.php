@@ -11,7 +11,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Learn_CI</a>
@@ -45,5 +45,4 @@
       </ul>
   </div>
 </nav>
-  
-<div class="container">
+<div class="container" style="margin-top:80px">
