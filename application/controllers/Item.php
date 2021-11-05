@@ -64,6 +64,7 @@ class Item extends CI_Controller {
             redirect(base_url('item/create')); //redirect to create view 
         }else{
         $this->Item_model->save_item(); //link to save item function in model
+        $this->session->set_flashdata('success_msg', 'Added Item Successfully.');
         redirect(base_url('item/list')); //redirect to list view
         }
    }
@@ -134,7 +135,8 @@ class Item extends CI_Controller {
             redirect(base_url('item/edit/'.$id)); //redirect to edit view
         }else{ 
           $this->Item_model->update_item($id); //link to update item function from model 
-          redirect(base_url('item')); //redirect to list
+          $this->session->set_flashdata('success_msg', 'Updated Successfully.');
+          redirect(base_url('item/list')); //redirect to list
         }
    }
    /**
@@ -150,7 +152,8 @@ class Item extends CI_Controller {
    public function delete($id)
    {
        $item = $this->Item_model->delete_item($id); //link to delete item function from model
-       redirect(base_url('item')); //redirect to list
+       $this->session->set_flashdata('danger_msg', 'Deleted Successfully.');
+       redirect(base_url('item/list')); //redirect to list
    }
    /**
     * End Delete Data Function.
